@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap to Reveal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .ghost {
+            font-size: 50px;
+            cursor: pointer;
+            animation: float 2s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        #smartlink {
+            display: none;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            background: #ff5722;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        #smartlink:hover {
+            background: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ghost" onclick="shfaqLinkun()">👻</div>
+        <p>Tap to join in my private page</p>
+        <a id="smartlink" href="https://securelysmrt.com/s?a=270379&sm=50468&co=332044&mt=16&s1=Emily" target="_blank">Go to the link</a>
+    </div>
+    <script>
+        function shfaqLinkun() {
+            document.querySelector(".ghost").style.display = "none";
+            document.querySelector("#smartlink").style.display = "inline-block";
+        }
+    </script>
+</body>
+</html>
+
